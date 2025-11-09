@@ -65,6 +65,16 @@ const DrawerLayout = () => {
             ),
           }}
         />
+        <Drawer.Screen
+          name="logout"
+          options={{
+            title: 'Logout',
+            drawerLabel: 'Logout',
+            drawerIcon: ({ size, color }) => (
+              <Ionicons name="log-out-outline" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );

@@ -30,7 +30,7 @@ const Signup = () => {
         <View style={styles.card}>
           {/* Header */}
           <View style={styles.header}>
-            <Text style={styles.title}>BookStore📑</Text>
+            <Text style={styles.title}>Bookify Store📑</Text>
             <Text style={styles.subtitle}>Share your favorite reads</Text>
           </View>
 
