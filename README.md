@@ -4,13 +4,19 @@
 
 <img src="./booksfinder/assets/images/icon.png" alt="BOOKIFY Logo" width="200" height="200">
 
+![Made with React Native](https://img.shields.io/badge/MADE%20WITH-REACT%20NATIVE-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Powered by Expo](https://img.shields.io/badge/POWERED%20BY-EXPO-000020?style=for-the-badge&logo=expo&logoColor=white)
+![Node.js](https://img.shields.io/badge/NODE.JS-purple?style=for-the-badge)
+![Backend](https://img.shields.io/badge/BACKEND-EXPRESS.JS-000000?style=for-the-badge&logo=express&logoColor=white)
+![Database](https://img.shields.io/badge/DATABASE-MONGODB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
 ### Your Gateway to Book Recommendations
 
 </div>
 
 ---
 
-## About
+## ✨ About
 
 **BOOKIFY** is a full-stack mobile application designed for book lovers to discover, share, and explore book recommendations within a vibrant community. Whether you're looking for your next great read or want to share your favorite books with others, BOOKIFY provides an intuitive platform to connect readers and books.
 
@@ -18,9 +24,9 @@ Built with modern technologies, BOOKIFY offers a seamless experience with featur
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### Backend
+### 🔙 Backend
 - **Runtime:** Node.js
 - **Framework:** Express.js v5.0.1
 - **Database:** MongoDB with Mongoose v8.9.4
@@ -32,7 +38,7 @@ Built with modern technologies, BOOKIFY offers a seamless experience with featur
 - **CORS:** cors v2.8.5
 - **Development:** nodemon v3.2.0
 
-### Frontend
+### 📱 Frontend
 - **Framework:** React Native 0.81.5
 - **Platform:** Expo SDK 54.0.20
 - **Navigation:** Expo Router v6.0.27
@@ -52,9 +58,9 @@ Built with modern technologies, BOOKIFY offers a seamless experience with featur
 
 ---
 
-## Features
+## 🚀 Features
 
-### User Features
+### 👥 User Features
 - **Authentication System:** Secure user registration and login with JWT-based authentication
 - **Browse Recommendations:** Discover trending book recommendations from the community
 - **Create & Share:** Share book recommendations with cover images uploaded to Cloudinary
@@ -66,7 +72,7 @@ Built with modern technologies, BOOKIFY offers a seamless experience with featur
 - **Theme Support:** Toggle between Dark and Light themes for comfortable reading
 - **Logout Functionality:** Secure logout with session management
 
-### Technical Features
+### ⚙️ Technical Features
 - **RESTful API:** Clean and organized API endpoints for all operations
 - **Image Upload:** Cloudinary integration for efficient image storage and delivery
 - **Secure Authentication:** Password hashing with bcrypt and token-based auth
@@ -80,7 +86,7 @@ Built with modern technologies, BOOKIFY offers a seamless experience with featur
 
 ---
 
-## Folder Structure
+## 📁 Folder Structure
 
 ```
 books-recommendation-app/
@@ -160,15 +166,15 @@ books-recommendation-app/
 
 ---
 
-## Installation & Setup
+## 📦 Installation & Setup
 
-### Prerequisites
+### 📋 Prerequisites
 - Node.js (v14 or higher)
 - MongoDB (local or Atlas)
 - Expo CLI
 - npm or yarn
 
-### Backend Setup
+### 🔧 Backend Setup
 
 1. Navigate to the backend directory:
 ```bash
@@ -197,7 +203,7 @@ npm run dev
 
 The backend server will run on `http://localhost:5000`
 
-### Frontend Setup
+### 💻 Frontend Setup
 
 1. Navigate to the frontend directory:
 ```bash
@@ -224,14 +230,14 @@ npx expo start
 
 ---
 
-## API Endpoints
+## 🔌 API Endpoints
 
-### Authentication Routes
+### 🔐 Authentication Routes
 - `POST /api/auth/register` - Register a new user
 - `POST /api/auth/login` - Login user
 - `GET /api/auth/user` - Get authenticated user details
 
-### Book Routes
+### 📚 Book Routes
 - `GET /api/books` - Get all books with pagination
 - `GET /api/books/:id` - Get book by ID
 - `POST /api/books` - Create new book recommendation (protected)
@@ -241,7 +247,7 @@ npx expo start
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 <div align="center">
 <i>Screenshots coming soon...</i>
@@ -249,7 +255,7 @@ npx expo start
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -261,13 +267,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## License
+## 📄 License
 
 This project is open source and available for educational purposes.
 
 ---
 
-## Contact & Support
+## 📧 Contact & Support
 
 For any queries or support, please reach out through the developer info section in the app.
 
