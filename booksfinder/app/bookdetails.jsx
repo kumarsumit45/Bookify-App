@@ -31,7 +31,7 @@ const bookdetails = () => {
 
   return (
     <SafeAreaView style={[styles.container,{backgroundColor:colors.background}]}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{top:-30}}>
         <ImageBackground
           source={{uri:image}}
           style={styles.imageBG}
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
       flex:1,
     },
     imageBG:{
-        height:400,
+        height:420,
         width:"100%",
         position:"relative",
     },
