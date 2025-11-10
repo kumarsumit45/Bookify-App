@@ -2,7 +2,7 @@
 
 # BOOKIFY
 
-<img src="booksfinder/assets/images/icon.png" alt="BOOKIFY Logo" width="200" height="200">
+<img src="https://raw.githubusercontent.com/kumarsumit45/Bookify-App/main/booksfinder/assets/images/icon.png" alt="BOOKIFY Logo" width="200" height="200">
 
 ![Made with React Native](https://img.shields.io/badge/MADE%20WITH-REACT%20NATIVE-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Powered by Expo](https://img.shields.io/badge/POWERED%20BY-EXPO-000020?style=for-the-badge&logo=expo&logoColor=white)
