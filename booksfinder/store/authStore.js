@@ -2,7 +2,6 @@ import {create} from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import {base_url} from "../constants/api"
 
-// const base_url ="https://bookstore-backend-5xrt.onrender.com";
 
 export const useAuthStore = create((set)=>({
     user:null,

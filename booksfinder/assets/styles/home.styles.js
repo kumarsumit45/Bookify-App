@@ -20,6 +20,21 @@ const createStyles = (colors) => StyleSheet.create({
     marginBottom: 20,
     alignItems: "center",
   },
+  logoImg:{
+    height:40,
+    width:40,
+    borderRadius:20,
+  },
+  logoContainer:{
+    height:42,
+    width:42,
+    borderRadius:20,
+    backgroundColor:"#ffff",
+    borderWidth:1.2,
+    borderColor:"grey",
+    top:-5,
+    left:12
+  },
   headerTitle: {
     fontSize: 24,
     fontWeight:"bold",
@@ -27,7 +42,7 @@ const createStyles = (colors) => StyleSheet.create({
     letterSpacing: 0.5,
     color: colors.primary,
     marginBottom: 8,
-    marginLeft:55
+    marginRight:20
   },
   headerSubtitle: {
     fontSize: 14,

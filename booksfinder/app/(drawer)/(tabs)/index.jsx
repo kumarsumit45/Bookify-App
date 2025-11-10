@@ -7,7 +7,7 @@ import {
   RefreshControl,
 } from "react-native";
 import { useAuthStore } from "../../../store/authStore";
-
+import {useRouter} from "expo-router"
 import { Image } from "expo-image";
 import { useEffect, useState, useMemo } from "react";
 
@@ -31,12 +31,14 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
+  const router =useRouter();
+
   const fetchBooks = async (pageNum = 1, refresh = false) => {
     try {
       if (refresh) setRefreshing(true);
       else if (pageNum === 1) setLoading(true);
 
-      const response = await fetch(`${base_url}/api/books?page=${pageNum}&limit=4`, {
+      const response = await fetch(`${base_url}/api/books?page=${pageNum}&limit=5`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -52,8 +54,7 @@ export default function Home() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Failed to fetch books");
 
-      // todo fix it later
-      // setBooks((prevBooks) => [...prevBooks, ...data.books]);
+   
 
       const uniqueBooks =
         refresh || pageNum === 1
@@ -87,14 +88,29 @@ export default function Home() {
   };
 
   const renderItem = ({ item }) => (
-    <View style={styles.bookCard}>
+    <TouchableOpacity 
+       activeOpacity={0.8} 
+       style={styles.bookCard}
+       onPress={()=> router.push({
+        pathname:"bookdetails",
+        params:{
+          title : item.title,
+          image : item.image,
+          caption : item.caption,
+          rating : item.rating,
+          username: item.user?.username,
+          profileImage: item.user?.profileImage,
+          createdAt: item.createdAt,
+        }
+       })}
+       >
       <View style={styles.bookHeader}>
         <View style={styles.userInfo}>
           <Image
             source={{ uri: item.user?.profileImage || 'https://via.placeholder.com/40' }}
             style={styles.avatar}
           />
-          <Text style={styles.username}>{item.user?.username || 'Anonymous'}</Text>
+          <Text style={styles.username}> {item.user?.username || 'Anonymous'}</Text>
         </View>
       </View>
 
@@ -108,7 +124,7 @@ export default function Home() {
         <Text style={styles.caption}>{item.caption}</Text>
         <Text style={styles.date}>Shared on {formatPublishDate(item.createdAt)}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   const renderRatingStars = (rating) => {
@@ -153,10 +169,20 @@ export default function Home() {
               flexDirection:"row",
               marginLeft:-10,
               gap:0,
-              width:"100%"
+              width:"100%",
+              justifyContent:"space-between"
               }}>
-              <DrawerToggle />
+              
+              
+              <TouchableOpacity
+                style={styles.logoContainer}
+                activeOpacity={0.5}
+                onPress={()=>router.navigate("(drawer)/about")}
+                >
+              <Image source={require("../../../assets/images/translogoblack.png")} style={styles.logoImg}/>
+              </TouchableOpacity>
               <Text style={styles.headerTitle}>Books Trending</Text>
+              <DrawerToggle />
 
             </View>
             <Text style={styles.headerSubtitle}>Discover great reads from the community👇</Text>
@@ -165,7 +191,7 @@ export default function Home() {
         ListFooterComponent={
           hasMore && books.length > 0 ? (
             <ActivityIndicator style={styles.footerLoader} size="small" color={colors.primary} />
-          ) : null
+          ) : (<Text style={{alignSelf:"center",top:10,}}>You've reached the end of the list.</Text>)
         }
         ListEmptyComponent={
           <View style={styles.emptyContainer}>

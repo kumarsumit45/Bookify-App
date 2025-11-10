@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity,} from 'react-native';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useThemeStore } from '../../store/themeStore';
 import { useRouter } from 'expo-router';
+import {Image } from "expo-image"
 
 const About = () => {
   const { colors } = useThemeStore();
@@ -19,13 +20,17 @@ const About = () => {
           <Ionicons name="arrow-back" size={24} color={colors.textDark} />
         </TouchableOpacity>
         <View style={styles.iconContainer}>
-          <Ionicons name="book-outline" size={80} color={colors.primary} />
+          <Image 
+           style={styles.logoImg} 
+           source={require("../../assets/images/translogoblack.png") } 
+           contentFit="fill" />
+          {/* <Ionicons name="book-outline" size={80} color={colors.primary} /> */}
         </View>
 
-        <Text style={[styles.title, { color: colors.primary }]}>About Books Finder</Text>
+        <Text style={[styles.title, { color: colors.primary }]}>About Bookify</Text>
 
         <Text style={[styles.description, { color: colors.textSecondary }]}>
-          Books Finder is a comprehensive mobile application designed to help book enthusiasts
+          BookiFy is a comprehensive mobile application designed to help book enthusiasts
           discover, organize, and share their favorite books.
         </Text>
 
@@ -75,7 +80,19 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     alignItems: 'center',
+    justifyContent:"center",
+    alignSelf:"center",
     marginVertical: 20,
+    backgroundColor:"#fff",
+    borderRadius:300,
+    height:200,
+    width:200
+
+  },
+  logoImg:{
+    height:150,
+    width:"100%",
+    // top:40
   },
   title: {
     fontSize: 28,
